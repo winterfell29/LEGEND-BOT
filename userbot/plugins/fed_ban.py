@@ -1,16 +1,17 @@
-from fridaybot.function import fetch_feds
-from fridaybot.modules.sql_helper.feds_sql import (
+from userbot.function import fetch_feds
+from userbot.plugins.sql_helper.feds_sql import (
     add_fed,
     get_all_feds,
     is_fed_indb,
     rmfed,
 )
-from fridaybot.utils import friday_on_cmd
+from userbot import bot
+from userbot.utils import admin_on_cmd
 
 chnnl_grp = Config.FBAN_GROUP
 
 
-@friday.on(friday_on_cmd(pattern="fadd ?(.*)"))
+@bot.on(admin_on_cmd(pattern="fadd ?(.*)"))
 async def _(event):
     nolol = 0
     yeslol = 0
@@ -42,7 +43,7 @@ async def _(event):
         await event.edit("`Done ! Added This Fed To DataBase`")
 
 
-@friday.on(friday_on_cmd(pattern="frm ?(.*)"))
+@bot.on(admin_on_cmd(pattern="frm ?(.*)"))
 async def _(event):
     lol_s = event.pattern_match.group(1)
     await event.edit("`Processing..`")
@@ -64,7 +65,7 @@ async def _(event):
         await event.edit("`This Fed Not Found On Db.`")
 
 
-@friday.on(friday_on_cmd(pattern="fban ?(.*)"))
+@bot.on(admin_on_cmd(pattern="fban ?(.*)"))
 async def _(event):
     lol_s = event.pattern_match.group(1)
     if lol_s == None:
@@ -94,7 +95,7 @@ async def _(event):
     )
 
 
-@friday.on(friday_on_cmd(pattern="unfban ?(.*)"))
+@bot.on(admin_on_cmd(pattern="unfban ?(.*)"))
 async def _(event):
     lol_s = event.pattern_match.group(1)
     if lol_s == None:
