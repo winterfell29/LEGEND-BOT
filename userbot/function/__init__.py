@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup as bs
 from pymediainfo import MediaInfo
 from telethon.tl.types import MessageMediaPhoto
 BASE_URL = "https://isubtitles.org"
-from userbot.Configs import Config
+from userbot.uniborgConfig import Config
 
 sedpath = Config.TMP_DOWNLOAD_DIRECTORY
 from fridaybot import logging
