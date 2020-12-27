@@ -129,12 +129,9 @@ if ENV:
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
         #auto bio
         BIO_MSG = os.environ.get("BIO_MSG", None)
-        #Lydia API
-        LYDIA_API = os.environ.get("LYDIA_API",None)
-        #fban file
-        FBAN_GROUP = int(os.environ.get("FBAN_GROUP", False)
-        #plugin betichod
-        PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None)
+        #LYDIA_API = os.environ.get("LYDIA_API", None)
+        PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", False))
+        FBAN_GROUP = int(os.environ.get("FBAN_GROUP", False))
 
         UPSTREAM_REPO = os.environ.get(
             "UPSTREAM_REPO", "https://github.com/legendx22/LEGEND-BOT"
