@@ -18,7 +18,7 @@ BASE_URL = "https://isubtitles.org"
 from userbot.uniborgConfig import Config
 
 sedpath = Config.TMP_DOWNLOAD_DIRECTORY
-from fridaybot import logging
+from userbot import logging
 
 logger = logging.getLogger("[--WARNING--]")
 if not os.path.isdir(sedpath):
